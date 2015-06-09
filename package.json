@@ -1,0 +1,25 @@
+{
+  "name": "subtide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sweetcoco/subtide.git"
+  },
+  "author": "sweetcoco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sweetcoco/subtide/issues"
+  },
+  "homepage": "https://github.com/sweetcoco/subtide#readme",
+  "dependencies": {
+    "hapi-auth-cookie": "^2.2.0",
+    "joi": "^6.4.3",
+    "mongoose": "^4.0.5",
+    "passport-local-mongoose": "^1.0.0"
+  }
+}
