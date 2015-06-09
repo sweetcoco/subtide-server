@@ -11,7 +11,7 @@ exports.index = {
 	},
 	handler: {
 		directory: {
-			path: '../subtide/dist'
+			path: './dist'
 		}
 	}
 };
