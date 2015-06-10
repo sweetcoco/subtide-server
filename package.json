@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sweetcoco/subtide#readme",
   "dependencies": {
+    "hapi": "^8.6.1",
     "handlebars": "^3.0.3",
     "hapi-auth-cookie": "^2.2.0",
     "joi": "^6.4.3",
