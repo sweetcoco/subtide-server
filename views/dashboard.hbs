@@ -1,0 +1,21 @@
+<script src="//js.pusher.com/2.2/pusher.min.js"></script>
+
+<script>
+    // Enable pusher logging - don't include this in production
+    Pusher.log = function(message) {
+      if (window.console && window.console.log) {
+        window.console.log(message);
+      }
+    };
+
+    var pusher = new Pusher('0fbdcd6790847856f960');
+    var channel = pusher.subscribe('test_channel');
+    channel.bind('my_event', function(data) {
+      alert('An event was triggered with message: ' + data.message);
+    });
+  </script>
+
+<div class="container center-text">
+  <h1>Welcome to your subtide dashboard, {{credentials.email}}</h1>
+  <p><a href="/logout">logout</a>
+</div>

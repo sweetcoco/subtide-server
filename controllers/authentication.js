@@ -19,14 +19,14 @@ exports.login = {
 			// There has been an error, do something with it.
 			if (err) {
 				console.error(err);
-				return reply.redirect('/login');
+				return reply.redirect('/');
 			}
 
 			// If the authentication failed user will be false. If it's not false, we store the user
 			// in our session and redirect the user to the dashboard
 			if (user) {
 				request.auth.session.set(user);
-				return reply.redirect('/dashboard');
+				return reply.redirect('/');
 			}
 			return reply(message);
 

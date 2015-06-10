@@ -6,6 +6,17 @@ var Config = require('./config');
 var server = new Hapi.Server();
 server.connection({ port: Config.server.port });
 
+server.views({
+  engines: {
+    hbs: require('handlebars')
+  },
+  path: './views',
+  // layoutPath: './views/layout', // we no longer have
+  // layout: 'default',            // a use for a default layout
+  helpersPath: 'views/helpers',
+  partialsPath: 'views/partials'
+});
+
 // Register the plugin
 server.register(require('hapi-auth-cookie'), function (err) {
     if (err) {
