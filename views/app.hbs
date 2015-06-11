@@ -12,16 +12,25 @@
 
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/subtide.css">
+    <script src="//js.pusher.com/2.2/pusher.min.js"></script>
 
+    <script type="text/javascript">
+    window.appStrap = {
+        id: '{{id}}',
+        email: '{{email}}',
+        firstName: '{{firstName}}',
+        lastName: '{{lastName}}',
+        username: '{{username}}',
+        baseUrl: 'http://{{baseUrl}}/api/',
+    }
+    var pusher = new Pusher('0fbdcd6790847856f960');
+      var channel = pusher.subscribe('test_channel');
+      channel.bind('my_event', function(data) {
+        alert(data.message);
+      });
+    </script>
 
-  </head>
-  <script>
-  window.app = {
-      id: '{{id}}',
-      email: '{{email}}',
-      baseUrl: 'http://{{baseUrl}}/api/',
-  }
-  </script>
+   </head>
   <body>
 
 

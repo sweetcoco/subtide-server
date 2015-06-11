@@ -35,6 +35,9 @@ exports.index = {
 			reply.view('app', {
 				id: request.auth.credentials._id,
 				email: request.auth.credentials.email,
+				firstName: request.auth.credentials.firstName,
+				lastName: request.auth.credentials.lastName,
+				username: request.auth.credentials.username,
 				baseUrl: Config.server.hostname + ':' + Config.server.port,
 			});
 		} else {

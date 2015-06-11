@@ -17,11 +17,12 @@
   },
   "homepage": "https://github.com/sweetcoco/subtide#readme",
   "dependencies": {
-    "hapi": "^8.6.1",
     "handlebars": "^3.0.3",
+    "hapi": "^8.6.1",
     "hapi-auth-cookie": "^2.2.0",
     "joi": "^6.4.3",
     "mongoose": "^4.0.5",
-    "passport-local-mongoose": "^1.0.0"
+    "passport-local-mongoose": "^1.0.0",
+    "pusher": "^1.0.5"
   }
 }

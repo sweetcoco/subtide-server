@@ -52,14 +52,20 @@ exports.register = {
 	validate: {
 		payload: {
             email: Joi.string().email().required(),
-            password: Joi.string().required()
+            password: Joi.string().required(),
+			firstName: Joi.string().required(),
+			lastName: Joi.string().required(),
+			username: Joi.string().required(),
         }
 	},
 	handler: function(request, reply) {
 
 		// Create a new user
 		var newUser = new User({
-			email: request.payload.email
+			email: request.payload.email,
+			firstName: request.payload.firstName,
+			lastName: request.payload.lastName,
+			username: request.payload.username,
 		});
 
 		// The register function has been added by passport-local-mongoose and takes as first parameter

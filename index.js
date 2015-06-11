@@ -1,6 +1,7 @@
 var Hapi = require('hapi');
 var Routes = require('./routes');
 var Config = require('./config');
+var Pusher = require('pusher');
 
 // Create a server with a host and port
 var server = new Hapi.Server();
@@ -16,6 +17,17 @@ server.views({
   helpersPath: 'views/helpers',
   partialsPath: 'views/partials'
 });
+
+// get pusher up and running
+var pusher = new Pusher({
+  appId: '120862',
+  key: '0fbdcd6790847856f960',
+  secret: 'd209b7b7048078368d14'
+});
+
+// pusher.trigger('test_channel', 'my_event', {
+//   "message": "hello world"
+// });
 
 // Register the plugin
 server.register(require('hapi-auth-cookie'), function (err) {
