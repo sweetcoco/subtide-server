@@ -1,4 +1,6 @@
 var Mongoose = require('../database').Mongoose;
+var Channel = require('../models/channel').Channel;
+
 
 //create the schema
 var userSchema = new Mongoose.Schema({
@@ -7,6 +9,7 @@ var userSchema = new Mongoose.Schema({
 	firstName:    { type: String,	required: true },
 	lastName:     { type: String,	required: true },
 	username:     { type: String,	required: true },
+	channels:    [{ type: Mongoose.Schema.Types.ObjectId, ref: 'Channel'}],
 	creationDate: { type: Date,		required: true, default: Date.now },
 });
 

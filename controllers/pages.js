@@ -45,3 +45,24 @@ exports.index = {
 		}
 	}
 };
+
+/**
+ * Handles a call to / and shows some text with links to login and registration
+ */
+exports.toApp = {
+	auth: {
+		mode: 'try',
+		strategy: 'session'
+	},
+
+	
+	handler: function (request, reply) {
+
+		if (request.auth.isAuthenticated) {
+
+
+		} else {
+			reply.view('home');
+		}
+	}
+};

@@ -5,7 +5,9 @@ var Pusher = require('pusher');
 
 // Create a server with a host and port
 var server = new Hapi.Server();
-server.connection({ port: Config.server.port });
+server.connection({ port: Config.server.port, routes: { cors: true } });
+
+
 
 server.views({
   engines: {

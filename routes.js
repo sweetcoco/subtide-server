@@ -1,7 +1,7 @@
 var Static = require('./controllers/static');
 var Pages = require('./controllers/pages');
 var Authentication = require('./controllers/authentication');
-//var Api = require('./controllers/api');
+var Api = require('./controllers/api');
 
 /**
  * Contains the list of all routes, i.e. methods, paths and the config functions
@@ -9,7 +9,16 @@ var Authentication = require('./controllers/authentication');
  */
 exports.endpoints = [
 	{ method: 'GET',    path: '/assets/{param*}',          						config: Static.assets   	    },
-	{ method: 'GET',    path: '/',          							config: Pages.index   	    	},
+	{ method: 'GET',    path: '/fonts/{param*}',          						config: Static.fonts 	  	    },
+	{ method: 'GET',    path: '/',          									config: Pages.index   	    	},
+	{ method: 'GET',    path: '/{param*}',          							config: Pages.toApp   	    	},
+
+	{ method: 'GET',    path: '/api/users/{userId}',							config: Api.getUser 			},
+	{ method: 'PUT',    path: '/api/users/{userId}',							config: Api.updateUser 			},
+
+	{ method: 'GET',   	path: '/api/channels/{channel_ids?}',						config: Api.getChannels		},
+	//{ method: 'GET',   	path: '/api/channels/',									config: Api.getAllGroups	},
+	{ method: 'POST',   path: '/api/channels',									config: Api.createChannel		},
 
 	{ method: 'POST',   path: '/login',          								config: Authentication.login 	},
 	{ method: 'GET',    path: '/logout',         								config: Authentication.logout 	},

@@ -40,8 +40,13 @@ exports.login = {
 exports.logout = {
 	auth: 'session',
 	handler: function (request, reply) {
-		request.auth.session.clear();
-		reply().redirect('/');
+
+		if (request.auth.isAuthenticated) {
+			request.auth.session.clear();
+			reply().redirect('/');
+		} else {
+			reply().redirect('/');
+		}
 	}
 };
 
