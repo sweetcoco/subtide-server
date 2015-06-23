@@ -4,7 +4,8 @@ var Mongoose = require('../database').Mongoose;
 var ChannelSchema = new Mongoose.Schema({
   channelName: String,
   channelCreator: Mongoose.Schema.Types.ObjectId,
-  channelMembers: [Mongoose.Schema.Types.ObjectId]
+  channelMembers: [Mongoose.Schema.Types.ObjectId],
+  userInvites: [Mongoose.Schema.Types.ObjectId],
 });
 
 

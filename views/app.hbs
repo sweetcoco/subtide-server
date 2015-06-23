@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <base href="/" />
-<meta name="subtide/config/environment" content="%7B%22modulePrefix%22%3A%22subtide%22%2C%22environment%22%3A%22development%22%2C%22baseURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22subtide%22%2C%22version%22%3A%220.0.0.94cde943%22%7D%2C%22contentSecurityPolicyHeader%22%3A%22Content-Security-Policy-Report-Only%22%2C%22contentSecurityPolicy%22%3A%7B%22default-src%22%3A%22%27none%27%22%2C%22script-src%22%3A%22%27self%27%20%27unsafe-eval%27%22%2C%22font-src%22%3A%22%27self%27%22%2C%22connect-src%22%3A%22%27self%27%22%2C%22img-src%22%3A%22%27self%27%22%2C%22style-src%22%3A%22%27self%27%22%2C%22media-src%22%3A%22%27self%27%22%7D%2C%22exportApplicationGlobal%22%3Atrue%7D" />
+    <meta name="subtide/config/environment" content="%7B%22modulePrefix%22%3A%22subtide%22%2C%22environment%22%3A%22development%22%2C%22baseURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22PUSHER_OPTS%22%3A%7B%22key%22%3A%220fbdcd6790847856f960%22%2C%22connection%22%3A%7B%7D%2C%22logAllEvents%22%3Afalse%7D%2C%22name%22%3A%22subtide%22%2C%22version%22%3A%220.0.0.10f8a835%22%7D%2C%22exportApplicationGlobal%22%3Atrue%7D" />
+
+<!--meta name="subtide/config/environment" content="%7B%22modulePrefix%22%3A%22subtide%22%2C%22environment%22%3A%22development%22%2C%22baseURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22subtide%22%2C%22version%22%3A%220.0.0.94cde943%22%7D%2C%22contentSecurityPolicyHeader%22%3A%22Content-Security-Policy-Report-Only%22%2C%22contentSecurityPolicy%22%3A%7B%22default-src%22%3A%22%27none%27%22%2C%22script-src%22%3A%22%27self%27%20%27unsafe-eval%27%22%2C%22font-src%22%3A%22%27self%27%22%2C%22connect-src%22%3A%22%27self%27%22%2C%22img-src%22%3A%22%27self%27%22%2C%22style-src%22%3A%22%27self%27%22%2C%22media-src%22%3A%22%27self%27%22%7D%2C%22exportApplicationGlobal%22%3Atrue%7D" /-->
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/subtide.css">
-    <script src="//js.pusher.com/2.2/pusher.min.js"></script>
+    <!--script src="//js.pusher.com/2.2/pusher.min.js"></script-->
 
     <script type="text/javascript">
     window.appStrap = {
@@ -24,11 +26,11 @@
         username: '{{username}}',
         baseUrl: 'http://{{baseUrl}}/api/',
     }
-    var pusher = new Pusher('0fbdcd6790847856f960');
-      var channel = pusher.subscribe('test_channel');
-      channel.bind('my_event', function(data) {
-        alert(data.message);
-      });
+    // window.pusher = new Pusher('0fbdcd6790847856f960');
+    // window.myChannel = pusher.subscribe('user_' + appStrap.id);
+    //   myChannel.bind('addToGroup', function(data) {
+    //     alert(data.message);
+    //   });
     </script>
 
    </head>
